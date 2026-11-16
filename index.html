@@ -1,0 +1,940 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ST--江浙沪外籍女模</title>
+<meta name="description" content="江浙沪外籍女模 · 模特册，按城市分条共 182 位，点开看整册。">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="模特册">
+<meta property="og:title" content="ST--江浙沪外籍女模">
+<meta property="og:description" content="江浙沪外籍女模 · 模特册，按城市分条共 182 位，点开看整册。">
+<meta property="og:image" content="https://1599652880-debug.github.io/modelbook/assets/cover.jpg">
+<meta property="og:url" content="https://1599652880-debug.github.io/modelbook/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ST--江浙沪外籍女模">
+<meta name="twitter:description" content="江浙沪外籍女模 · 模特册，按城市分条共 182 位，点开看整册。">
+<meta name="twitter:image" content="https://1599652880-debug.github.io/modelbook/assets/cover.jpg">
+<link rel="image_src" href="https://1599652880-debug.github.io/modelbook/assets/cover.jpg">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%231c1b19'/><rect x='6' y='8' width='20' height='15' rx='2.5' fill='%23f7f6f3'/><circle cx='12' cy='13.5' r='1.8' fill='%23c96f4a'/><path d='M7 21l6-6 4.5 4.5L21 15l5 6' stroke='%231c1b19' stroke-width='1.6' fill='none'/></svg>">
+<style>
+  :root{
+    --paper:#f7f6f3;
+    --ink:#1c1b19;
+    --ink-cap:rgba(51,51,51,.88);
+    --muted:#6b6862;
+    --faint:#a8a49c;
+    --line:#e6e2da;
+    --tint:#efece5;
+    --accent:#c96f4a;
+    --card:#ffffff;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei","Segoe UI",sans-serif;
+    line-height:1.85;
+    -webkit-text-size-adjust:100%;
+  }
+  a{color:var(--accent);text-decoration:none}
+  :focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+  /* ===== 正文版式：与分享页一致 ===== */
+  .wrap{max-width:720px;margin:0 auto;padding:28px 20px 64px}
+  .cover{width:100%;border-radius:10px;margin-bottom:20px;display:block;background:var(--tint)}
+  .cover[hidden]{display:none}
+  h1.art-title{font-size:26px;line-height:1.35;margin:0 0 10px;font-weight:700;word-break:break-word}
+  .body{font-size:17px;word-break:break-word}
+  .item{margin:0}
+  .cap{
+    font-family:Helvetica,Arial,"PingFang SC",sans-serif;
+    font-size:1.5em;font-weight:500;line-height:1.4;
+    color:var(--ink-cap);
+    margin:1.4em 0 .6em;
+    word-break:break-word;
+  }
+  .shot{margin:14px 0;position:relative}
+  .shot img{
+    max-width:100%;height:auto;display:block;margin:0 auto;
+    border-radius:8px;background:var(--tint);
+  }
+  .shot.err img{min-height:140px;background:#f3e9e4}
+  .shot.err::after{
+    content:"图片加载失败 · 可在编辑模式里换图";
+    position:absolute;inset:0;display:grid;place-items:center;
+    font-size:13px;color:var(--faint);pointer-events:none;
+  }
+  .foot{
+    margin-top:40px;padding-top:16px;border-top:1px solid var(--line);
+    color:var(--faint);font-size:12px;text-align:center;
+  }
+  .empty{
+    margin:28px 0;padding:22px 20px;border:1px dashed var(--line);border-radius:10px;
+    color:var(--muted);font-size:14px;line-height:1.7;background:#fffdf9;
+  }
+
+  /* ===== 编辑态：按钮与控件 ===== */
+  .ibtn{
+    display:inline-flex;align-items:center;justify-content:center;gap:5px;
+    min-height:36px;padding:0 10px;
+    border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--ink);
+    font:inherit;font-size:13px;line-height:1;cursor:pointer;white-space:nowrap;
+  }
+  .ibtn:hover{border-color:#cfc9bd;background:#faf8f4}
+  .ibtn svg{width:14px;height:14px;flex:0 0 auto}
+  .ibtn.warn{color:var(--accent);border-color:#e8d3c8}
+  .ibtn.warn:hover{background:#fdf4ef}
+  @media (pointer:coarse){ .ibtn{min-height:44px} }
+
+  .item-ctl,.shot-ctl{display:none}
+
+  body.editing .wrap{padding-top:72px}
+  body.editing .item-ctl{
+    display:flex;align-items:center;gap:8px;flex-wrap:wrap;
+    margin-top:26px;padding-top:12px;border-top:1px dashed var(--line);
+    font-size:13px;color:var(--muted);
+  }
+  body.editing .item-ctl .idx{
+    font-variant-numeric:tabular-nums;letter-spacing:.06em;color:var(--faint);font-size:12px;
+  }
+  body.editing .item-ctl .grow{flex:1 1 auto}
+  body.editing .cap{
+    outline:1px dashed #d8d2c6;outline-offset:8px;border-radius:3px;cursor:text;
+  }
+  body.editing .cap:focus{outline:1px solid var(--accent);background:#fffdf9}
+  body.editing .shot-ctl{
+    display:flex;gap:6px;position:absolute;top:10px;right:10px;z-index:2;
+  }
+  body.editing .shot-ctl .ibtn{
+    background:rgba(255,255,255,.95);box-shadow:0 2px 8px rgba(28,27,25,.12);
+    min-height:34px;padding:0 8px;
+  }
+  @media (pointer:coarse){ body.editing .shot-ctl .ibtn{min-height:40px} }
+
+  /* 顶部编辑条 */
+  .edbar{
+    position:fixed;top:0;left:0;right:0;z-index:55;
+    background:var(--card);border-bottom:1px solid var(--line);
+  }
+  .edbar[hidden]{display:none}
+  .edbar-in{
+    max-width:1100px;margin:0 auto;height:52px;padding:0 14px;
+    display:flex;align-items:center;gap:12px;
+  }
+  .edbar-t{display:flex;flex-direction:column;gap:1px;font-size:13px;line-height:1.3;min-width:0}
+  .edbar-t i{font-style:normal;font-size:11px;color:var(--faint);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .edbar-acts{margin-left:auto;display:flex;gap:8px;flex:0 0 auto}
+
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:7px;
+    height:40px;padding:0 15px;border-radius:9px;border:1px solid var(--line);
+    background:var(--card);color:var(--ink);font:inherit;font-size:14px;cursor:pointer;
+  }
+  .btn:hover{background:#faf8f4;border-color:#cfc9bd}
+  .btn.primary{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+  .btn.primary:hover{background:#000}
+  .btn.danger{color:var(--accent);border-color:#e8d3c8}
+  .btn.danger:hover{background:#fdf4ef}
+  .btn.small{height:36px;padding:0 12px;font-size:13px}
+  .btn svg{width:15px;height:15px}
+
+  .fab{
+    position:fixed;right:18px;bottom:18px;z-index:50;
+    display:inline-flex;align-items:center;gap:8px;height:44px;padding:0 18px;
+    border:0;border-radius:999px;background:var(--ink);color:var(--paper);
+    font:inherit;font-size:14px;cursor:pointer;box-shadow:0 8px 22px rgba(28,27,25,.24);
+  }
+  .fab:hover{background:#000}
+  .fab svg{width:15px;height:15px}
+  body.editing .fab{background:var(--accent);box-shadow:0 8px 22px rgba(201,111,74,.32)}
+
+  /* 设置抽屉 */
+  .drawer{
+    position:fixed;z-index:60;top:52px;right:0;bottom:0;width:min(370px,88vw);
+    padding:22px 20px 48px;overflow:auto;background:var(--card);
+    border-left:1px solid var(--line);box-shadow:-10px 0 32px rgba(28,27,25,.07);
+  }
+  .drawer[hidden]{display:none}
+  @media (max-width:760px){ .drawer{width:100%;box-shadow:none} }
+  .dgroup{margin:0 0 28px;padding-bottom:24px;border-bottom:1px solid var(--line)}
+  .dgroup:last-child{border-bottom:0;padding-bottom:0;margin-bottom:0}
+  .dgroup h3{margin:0 0 12px;font-size:12px;font-weight:600;letter-spacing:.08em;color:var(--muted)}
+  .flabel{display:block;font-size:13px;color:var(--muted);margin:14px 0 6px}
+  .flabel:first-of-type{margin-top:0}
+  .ftext{
+    width:100%;height:40px;padding:0 12px;
+    border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink);
+    font:inherit;font-size:15px;
+  }
+  .ftext:focus{outline:none;border-color:var(--accent)}
+  .dstat{margin:0 0 4px;font-size:13px;color:var(--muted);line-height:1.7}
+  .cover-mini{display:flex;gap:14px;align-items:flex-start;margin-top:4px}
+  .cover-mini img{width:66px;height:88px;object-fit:cover;border-radius:8px;background:var(--tint);flex:0 0 auto}
+  .btn-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+  .switch{display:flex;align-items:center;gap:10px;font-size:14px;cursor:pointer;min-height:40px}
+  .switch input{width:18px;height:18px;accent-color:var(--accent)}
+
+  /* 弹窗 */
+  .modal{position:fixed;inset:0;z-index:80;display:grid;place-items:center;padding:20px;background:rgba(28,27,25,.42)}
+  .modal[hidden]{display:none}
+  .modal-card{
+    width:min(430px,100%);max-height:88vh;overflow:auto;
+    padding:22px 20px;border-radius:14px;background:var(--card);
+    box-shadow:0 24px 64px rgba(0,0,0,.24);
+  }
+  .modal-card h3{margin:0 0 6px;font-size:17px;line-height:1.4}
+  .modal-card p{margin:0 0 6px;font-size:13px;color:var(--muted);line-height:1.7}
+  .mact{display:flex;justify-content:flex-end;gap:8px;margin-top:20px}
+
+  .toast{
+    position:fixed;left:50%;bottom:84px;transform:translateX(-50%) translateY(6px);
+    z-index:90;max-width:86vw;
+    padding:10px 18px;border-radius:999px;background:var(--ink);color:var(--paper);
+    font-size:14px;line-height:1.4;box-shadow:0 8px 24px rgba(0,0,0,.22);
+    opacity:0;pointer-events:none;transition:opacity .18s ease,transform .18s ease;
+  }
+  .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+  body.protect .wrap{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
+  body.protect .wrap input,body.protect .wrap .cap[contenteditable="true"]{-webkit-user-select:text;user-select:text}
+
+  @media (prefers-reduced-motion:reduce){
+    .toast{transition:none}
+  }
+
+  /* 打印 / 存 PDF */
+  @media print{
+    body{background:#fff}
+    .fab,.edbar,.drawer,.modal,.toast,.item-ctl,.shot-ctl{display:none!important}
+    body.editing .wrap{padding-top:28px}
+    body.editing .cap{outline:0!important}
+    .shot{break-inside:avoid-page;margin:10px 0}
+    .cap{break-after:avoid-page}
+  }
+</style>
+</head>
+<body class="protect">
+<div class="wrap">
+  <img class="cover" id="cover" alt="" loading="eager" decoding="async" fetchpriority="high">
+  <h1 class="art-title" id="title"></h1>
+  <div class="body" id="body"></div>
+  <div class="foot" id="foot"></div>
+</div>
+
+<div class="edbar" id="edbar" hidden>
+  <div class="edbar-in">
+    <span class="edbar-t">编辑模式<i>改动自动存在本机浏览器，不会上传</i></span>
+    <span class="edbar-acts">
+      <button class="btn small" id="btnSet" type="button">模板设置</button>
+      <button class="btn primary small" id="btnDone" type="button">完成</button>
+    </span>
+  </div>
+</div>
+
+<button class="fab" id="fab" type="button">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4l10-10a2.8 2.8 0 0 0-4-4L4 16v4z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+  <span id="fabTxt">编辑模板</span>
+</button>
+
+<aside class="drawer" id="drawer" hidden aria-label="模板设置">
+  <div class="dgroup">
+    <h3>页面</h3>
+    <label class="flabel" for="inTitle">标题</label>
+    <input class="ftext" id="inTitle" type="text" autocomplete="off">
+    <label class="flabel" for="inFoot">页脚文字（留空则不显示）</label>
+    <input class="ftext" id="inFoot" type="text" autocomplete="off">
+    <label class="flabel">封面图</label>
+    <div class="cover-mini">
+      <img id="coverThumb" alt="">
+      <div class="btn-row" style="margin-top:0">
+        <button class="btn small" type="button" data-act="cover">换封面</button>
+        <button class="btn small danger" type="button" data-act="coverDel">移除封面</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="dgroup">
+    <h3>内容</h3>
+    <p class="dstat" id="dstat">—</p>
+    <label class="flabel" for="inFilter">只看包含关键词的条目（只在编辑时生效）</label>
+    <input class="ftext" id="inFilter" type="search" placeholder="如：杭州、高性价比" autocomplete="off">
+    <div class="btn-row">
+      <button class="btn" type="button" data-act="addItem">新增一位模特</button>
+      <button class="btn danger" type="button" data-act="clearItems">清空所有条目</button>
+    </div>
+  </div>
+
+  <div class="dgroup">
+    <h3>保存与导出</h3>
+    <p class="dstat">改动自动存在这台电脑的浏览器里。要发给别人或换设备，导出 HTML / JSON。</p>
+    <div class="btn-row">
+      <button class="btn primary" type="button" id="btnExport">导出 HTML</button>
+      <button class="btn" type="button" id="btnExportJson">导出 JSON</button>
+      <button class="btn" type="button" id="btnImport">导入 JSON</button>
+    </div>
+    <input type="file" id="fileImport" accept=".json,application/json" hidden>
+    <div class="btn-row">
+      <button class="btn danger" type="button" id="btnReset">恢复初始内容</button>
+    </div>
+  </div>
+
+  <div class="dgroup">
+    <h3>展示</h3>
+    <label class="switch"><input type="checkbox" id="chkProtect" checked><span>禁止右键菜单与选中文字</span></label>
+  </div>
+</aside>
+
+<div class="modal" id="modal" hidden>
+  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+    <h3 id="mTitle">加一张图片</h3>
+    <p id="mDesc"></p>
+    <label class="flabel" for="mUrl">图片地址</label>
+    <input class="ftext" id="mUrl" type="text" placeholder="https://… 或 assets/图片名.jpg" autocomplete="off" spellcheck="false">
+    <div class="btn-row">
+      <button class="btn" type="button" id="mFileBtn">从电脑选一张图</button>
+      <input type="file" id="mFile" accept="image/*" hidden>
+    </div>
+    <div class="mact">
+      <button class="btn" type="button" id="mCancel">取消</button>
+      <button class="btn primary" type="button" id="mOk">确定</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="confirm" hidden>
+  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="cTitle">
+    <h3 id="cTitle">确认操作</h3>
+    <p id="cDesc"></p>
+    <div class="mact">
+      <button class="btn" type="button" id="cCancel">取消</button>
+      <button class="btn danger" type="button" id="cOk">确定</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script id="app-data" type="application/json">{"title":"ST--江浙沪外籍女模","cover":"","footer":"稿匣 · 写完即分享","items":[{"loc":"📍杭州","imgs":[],"alts":["杭州韦青云中日混血（1）.jpg","杭州韦青云中日混血.jpg"]},{"loc":"📍义乌","imgs":[],"alts":[""]},{"loc":"📍杭州","imgs":[],"alts":[""]},{"loc":"📍上海","imgs":[],"alts":[""]},{"loc":"📍杭州","imgs":[],"alts":[""]},{"loc":"📍上海","imgs":[],"alts":["","","","",""]},{"loc":"📍上海","imgs":[],"alts":[""]},{"loc":"📍上海","imgs":[],"alts":["","",""]},{"loc":"📍上海","imgs":[],"alts":[""]},{"loc":"📍杭州","imgs":[],"alts":[""]},{"loc":"📍杭州","imgs":[],"alts":[""]},{"loc":"📍杭州","imgs":[],"alts":["","","",""]},{"loc":"📍杭州","imgs":[],"alts":[""]},{"loc":"📍杭州","imgs":[],"alts":[""]},{"loc":"📍杭州","imgs":[],"alts":[""]},{"loc":"📍湖州","imgs":[],"alts":["",""]},{"loc":"📍杭州","imgs":[],"alts":[""]},{"loc":"📍杭州","imgs":[],"alts":["",""]},{"loc":"📍上海","imgs":[],"alts":[""]},{"loc":"📍宁波","imgs":[],"alts":[""]},{"loc":"📍上海","imgs":[],"alts":[""]},{"loc":"📍上海","imgs":[],"alts":[""]},{"loc":"📍江苏","imgs":[],"alts":["",""]},{"loc":"📍上海","imgs":[],"alts":[""]},{"loc":"📍上海","imgs":[],"alts":[""]},{"loc":"📍温州","imgs":[],"alts":[""]},{"loc":"📍杭州","imgs":[],"alts":[""]},{"loc":"📍上海","imgs":[],"alts":["",""]},{"loc":"📍上海","imgs":[],"alts":[""]},{"loc":"📍上海","imgs":[],"alts":[""]},{"loc":"📍上海","imgs":[],"alts":[""]},{"loc":"📍上海","imgs":[],"alts":[""]},{"loc":"📍杭州","imgs":[],"alts":[""]},{"loc":"📍上海","imgs":[],"alts":[""]},{"loc":"📍杭州","imgs":[],"alts":[""]},{"loc":"📍杭州","imgs":[],"alts":[""]},{"loc":"📍杭州","imgs":[],"alts":[""]},{"loc":"📍上海","imgs":[],"alts":[""]},{"loc":"📍上海","imgs":[],"alts":[""]},{"loc":"📍上海","imgs":[],"alts":[""]},{"loc":"📍杭州","imgs":[],"alts":[""]},{"loc":"📍上海","imgs":[],"alts":[""]},{"loc":"📍上海","imgs":[],"alts":[""]},{"loc":"📍上海","imgs":[],"alts":[""]},{"loc":"📍杭州","imgs":[],"alts":[""]},{"loc":"📍上海","imgs":[],"alts":[""]},{"loc":"📍杭州","imgs":[],"alts":[""]},{"loc":"📍杭州","imgs":[],"alts":[""]},{"loc":"📍上海","imgs":[],"alts":[""]},{"loc":"📍杭州","imgs":[],"alts":[""]},{"loc":"📍杭州","imgs":[],"alts":[""]},{"loc":"📍上海","imgs":[],"alts":["",""]},{"loc":"📍上海","imgs":[],"alts":[""]},{"loc":"📍上海","imgs":[],"alts":[""]},{"loc":"📍上海","imgs":[],"alts":[""]},{"loc":"📍杭州","imgs":[],"alts":[""]},{"loc":"📍杭州","imgs":[],"alts":[""]},{"loc":"📍上海","imgs":[],"alts":[""]},{"loc":"📍上海","imgs":[],"alts":[""]},{"loc":"📍上海","imgs":[],"alts":[""]},{"loc":"📍杭州","imgs":[],"alts":[""]},{"loc":"📍上海","imgs":[],"alts":[""]},{"loc":"📍上海","imgs":[],"alts":[""]},{"loc":"📍上海","imgs":[],"alts":[""]},{"loc":"📍苏州","imgs":[],"alts":[""]},{"loc":"📍无锡","imgs":[],"alts":[""]},{"loc":"📍常州","imgs":[],"alts":[""]},{"loc":"📍苏州","imgs":[],"alts":[""]},{"loc":"📍上海","imgs":[],"alts":[""]},{"loc":"📍上海","imgs":[],"alts":[""]},{"loc":"📍上海","imgs":[],"alts":[""]},{"loc":"📍上海","imgs":[],"alts":[""]},{"loc":"📍杭州","imgs":[],"alts":[""]},{"loc":"📍杭州","imgs":[],"alts":[""]},{"loc":"📍杭州","imgs":[],"alts":[""]},{"loc":"📍杭州","imgs":[],"alts":[""]},{"loc":"📍上海","imgs":[],"alts":[""]},{"loc":"📍杭州","imgs":[],"alts":[""]},{"loc":"📍上海","imgs":[],"alts":["",""]},{"loc":"📍上海","imgs":[],"alts":[""]},{"loc":"📍上海","imgs":[],"alts":["",""]},{"loc":"📍杭州","imgs":[],"alts":[""]},{"loc":"📍上海","imgs":[],"alts":["","",""]},{"loc":"📍江苏徐州","imgs":[],"alts":["","","",""]},{"loc":"📍上海","imgs":[],"alts":["","",""]},{"loc":"📍上海","imgs":[],"alts":[""]},{"loc":"📍南京）法国","imgs":[],"alts":["","","","",""]},{"loc":"📍上海","imgs":[],"alts":["","","","","",""]},{"loc":"📍安徽合肥（南京周边）","imgs":[],"alts":["","",""]},{"loc":"📍上海","imgs":[],"alts":["",""]},{"loc":"📍上海","imgs":[],"alts":[""]},{"loc":"📍杭州","imgs":[],"alts":[""]},{"loc":"📍杭州","imgs":[],"alts":[""]},{"loc":"📍杭州","imgs":[],"alts":[""]},{"loc":"📍杭州","imgs":[],"alts":[""]},{"loc":"📍杭州","imgs":[],"alts":[""]},{"loc":"📍杭州","imgs":[],"alts":["",""]},{"loc":"📍上海","imgs":[],"alts":[""]},{"loc":"📍上海","imgs":[],"alts":[""]},{"loc":"📍上海","imgs":[],"alts":[""]},{"loc":"📍上海","imgs":[],"alts":["",""]},{"loc":"📍上海","imgs":[],"alts":["",""]},{"loc":"📍上海","imgs":[],"alts":[""]},{"loc":"📍上海","imgs":[],"alts":[""]},{"loc":"📍上海","imgs":[],"alts":[""]},{"loc":"📍上海","imgs":[],"alts":[""]},{"loc":"📍苏州","imgs":[],"alts":[""]},{"loc":"📍无锡","imgs":[],"alts":[""]},{"loc":"📍常州","imgs":[],"alts":["","",""]},{"loc":"📍杭州（高性价比）","imgs":[],"alts":[""]},{"loc":"📍上海｜高性价比","imgs":[],"alts":[""]},{"loc":"📍上海｜高性价比","imgs":[],"alts":[""]},{"loc":"📍上海｜高性价比","imgs":[],"alts":[""]},{"loc":"📍上海｜高性价比","imgs":[],"alts":[""]},{"loc":"📍上海｜高性价比","imgs":[],"alts":[""]},{"loc":"📍合肥｜高性价比","imgs":[],"alts":["","",""]},{"loc":"📍杭州｜高性价比","imgs":[],"alts":["",""]},{"loc":"📍上海｜高性价比","imgs":[],"alts":["",""]},{"loc":"📍上海｜高性价比","imgs":[],"alts":[""]},{"loc":"📍上海｜高性价比","imgs":[],"alts":["",""]},{"loc":"📍上海｜高性价比","imgs":[],"alts":["",""]},{"loc":"📍杭州｜高性价比","imgs":[],"alts":["",""]},{"loc":"📍杭州｜高性价比","imgs":[],"alts":["","",""]},{"loc":"📍杭州｜高性价比","imgs":[],"alts":[""]},{"loc":"📍南京｜高性价比","imgs":[],"alts":[""]},{"loc":"📍上海｜高性价比","imgs":[],"alts":[""]},{"loc":"📍上海｜高性价比","imgs":[],"alts":[""]},{"loc":"📍上海｜高性价比","imgs":[],"alts":["",""]},{"loc":"📍上海｜高性价比","imgs":[],"alts":[""]},{"loc":"📍杭州｜高性价比","imgs":[],"alts":[""]},{"loc":"📍苏州｜高性价比","imgs":[],"alts":[""]},{"loc":"📍杭州｜高性价比","imgs":[],"alts":[""]},{"loc":"📍杭州｜高性价比","imgs":[],"alts":["",""]},{"loc":"📍上海｜高性价比","imgs":[],"alts":["","",""]},{"loc":"📍上海｜高性价比","imgs":[],"alts":[""]},{"loc":"📍上海｜高性价比","imgs":[],"alts":[""]},{"loc":"📍无锡｜高性价比","imgs":[],"alts":[""]},{"loc":"📍杭州｜高性价比","imgs":[],"alts":[""]},{"loc":"📍杭州｜高性价比","imgs":[],"alts":["",""]},{"loc":"📍上海｜高性价比","imgs":[],"alts":[""]},{"loc":"📍上海｜高性价比","imgs":[],"alts":[""]},{"loc":"📍上海｜高性价比","imgs":[],"alts":["",""]},{"loc":"📍杭州｜高性价比","imgs":[],"alts":["",""]},{"loc":"📍上海｜高性价比","imgs":[],"alts":["",""]},{"loc":"📍上海｜高性价比","imgs":[],"alts":[""]},{"loc":"📍上海｜高性价比","imgs":[],"alts":["",""]},{"loc":"📍上海｜高性价比","imgs":[],"alts":[""]},{"loc":"📍湖州｜高性价比","imgs":[],"alts":[""]},{"loc":"📍上海｜高性价比","imgs":[],"alts":[""]},{"loc":"📍上海｜高性价比","imgs":[],"alts":[""]},{"loc":"📍苏州｜高性价比","imgs":[],"alts":[""]},{"loc":"📍上海｜高性价比","imgs":[],"alts":["",""]},{"loc":"📍常熟｜高性价比","imgs":[],"alts":[""]},{"loc":"📍杭州｜高性价比","imgs":[],"alts":["",""]},{"loc":"📍杭州｜高性价比","imgs":[],"alts":[""]},{"loc":"📍上海｜高性价比","imgs":[],"alts":[""]},{"loc":"📍杭州｜高性价比","imgs":[],"alts":["",""]},{"loc":"📍杭州｜高性价比","imgs":[],"alts":[""]},{"loc":"📍杭州｜高性价比","imgs":[],"alts":["",""]},{"loc":"📍杭州｜高性价比","imgs":[],"alts":[""]},{"loc":"📍上海｜高性价比","imgs":[],"alts":["",""]},{"loc":"📍苏州｜高性价比","imgs":[],"alts":[""]},{"loc":"📍杭州｜高性价比","imgs":[],"alts":["",""]},{"loc":"📍上海｜高性价比","imgs":[],"alts":[""]},{"loc":"📍上海｜高性价比","imgs":[],"alts":[""]},{"loc":"📍上海｜高性价比","imgs":[],"alts":[""]},{"loc":"📍上海｜高性价比","imgs":[],"alts":[""]},{"loc":"📍杭州｜高性价比","imgs":[],"alts":[""]},{"loc":"📍上海｜高性价比","imgs":[],"alts":["",""]},{"loc":"📍义乌｜高性价比","imgs":[],"alts":[""]},{"loc":"📍杭州｜高性价比","imgs":[],"alts":[""]},{"loc":"📍杭州｜高性价比","imgs":[],"alts":["",""]},{"loc":"📍上海｜高性价比","imgs":[],"alts":["",""]},{"loc":"📍上海｜高性价比","imgs":[],"alts":[""]},{"loc":"📍义乌｜高性价比","imgs":[],"alts":["",""]},{"loc":"📍杭州｜高性价比","imgs":[],"alts":[""]},{"loc":"📍上海｜高性价比","imgs":[],"alts":[""]},{"loc":"📍上海｜高性价比","imgs":[],"alts":[""]},{"loc":"📍上海｜高性价比","imgs":[],"alts":[""]},{"loc":"📍杭州｜高性价比","imgs":[],"alts":[""]},{"loc":"📍上海｜高性价比","imgs":[],"alts":[""]},{"loc":"📍上海｜高性价比","imgs":[],"alts":[""]}],"meta":{"id":"st-jzh-waiji-2026-noimg","protect":true}}</script>
+<script>
+(function(){
+  'use strict';
+
+  var KEY = 'modelbook:v1';
+  var $  = function(s, r){ return (r || document).querySelector(s); };
+  var $$ = function(s, r){ return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+
+  function svg(d){
+    return '<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">' + d + '</svg>';
+  }
+  var IC = {
+    up:    svg('<path d="M12 19V6"/><path d="M6 12l6-6 6 6"/>'),
+    down:  svg('<path d="M12 5v13"/><path d="M18 12l-6 6-6-6"/>'),
+    trash: svg('<path d="M4 7h16"/><path d="M9 7V5h6v2"/><path d="M6 7l1 13h10l1-13"/>'),
+    plus:  svg('<path d="M12 6v12"/><path d="M6 12h12"/>'),
+    swap:  svg('<path d="M4 9a8 8 0 0 1 13.5-4.5L20 7"/><path d="M20 4v3h-3"/><path d="M20 15a8 8 0 0 1-13.5 4.5L4 17"/><path d="M4 20v-3h3"/>')
+  };
+
+  var dataEl = $('#app-data');
+  var SEED = JSON.parse(dataEl.textContent || '{}');
+  var SEED_ID = (SEED.meta && SEED.meta.id) || 'seed';
+  var bodyEl = $('#body');
+  var DATA, editing = false, picker = null, confirmCb = null;
+  var saveTimer = null, toastTimer = null, filterQ = '';
+
+  function clone(o){ return JSON.parse(JSON.stringify(o)); }
+
+  function normalize(d){
+    d = d || {};
+    d.title  = typeof d.title  === 'string' ? d.title  : '';
+    d.footer = typeof d.footer === 'string' ? d.footer : '';
+    d.cover  = typeof d.cover  === 'string' ? d.cover  : '';
+    d.items  = (Array.isArray(d.items) ? d.items : []).map(function(it){
+      it = it || {};
+      return {
+        loc: String(it.loc || ''),
+        imgs: (Array.isArray(it.imgs) ? it.imgs : []).map(String).filter(Boolean)
+      };
+    });
+    d.meta = Object.assign({ id: SEED_ID, protect: true }, d.meta || {});
+    return d;
+  }
+
+  function load(){
+    try{
+      var raw = localStorage.getItem(KEY);
+      if(raw){
+        var s = JSON.parse(raw);
+        if(s && s.meta && s.meta.id === SEED_ID && Array.isArray(s.items)) return normalize(s);
+      }
+    }catch(err){}
+    return normalize(clone(SEED));
+  }
+
+  DATA = load();
+
+  /* ================= 渲染 ================= */
+
+  function sync(){ dataEl.textContent = JSON.stringify(DATA); }
+
+  function persist(){
+    sync();
+    try{ localStorage.setItem(KEY, JSON.stringify(DATA)); }
+    catch(err){ toast('浏览器存储写不下了（多半是内嵌的本地图片太多），请用「导出 HTML」保存'); }
+  }
+  function saveSoon(){ clearTimeout(saveTimer); saveTimer = setTimeout(persist, 350); }
+
+  function renderCover(){
+    var cov = $('#cover'), th = $('#coverThumb'), src = DATA.cover || '';
+    cov.hidden = !src;
+    if(src){ cov.src = src; } else { cov.removeAttribute('src'); }
+    th.style.display = src ? '' : 'none';
+    if(src) th.src = src;
+  }
+
+  function buildShot(src, j){
+    var fig = document.createElement('figure');
+    fig.className = 'shot';
+    fig.dataset.j = j;
+
+    var img = new Image();
+    img.alt = '';
+    img.loading = 'lazy';
+    img.decoding = 'async';
+    img.addEventListener('load', function(){ fig.classList.remove('err'); });
+    img.addEventListener('error', function(){
+      var n = parseInt(img.dataset.r || '0', 10);
+      if(n < 1 && !/^data:/.test(src)){
+        img.dataset.r = '1';
+        img.src = src + (src.indexOf('?') >= 0 ? '&' : '?') + '_r=' + Math.random().toString(36).slice(2, 6);
+        return;
+      }
+      fig.classList.add('err');
+    });
+    img.src = src;
+
+    var ctl = document.createElement('div');
+    ctl.className = 'shot-ctl';
+    ctl.innerHTML =
+      '<button class="ibtn" type="button" data-act="swap" aria-label="换图">' + IC.swap + '<span>换图</span></button>' +
+      '<button class="ibtn warn" type="button" data-act="delimg" aria-label="删除这张图">' + IC.trash + '</button>' +
+      '<button class="ibtn warn" type="button" data-act="delitem" aria-label="删除这一位">' + IC.trash + '<span>删除此人</span></button>';
+
+    fig.appendChild(img);
+    fig.appendChild(ctl);
+    return fig;
+  }
+
+  function buildItem(item, idx){
+    var sec = document.createElement('section');
+    sec.className = 'item';
+    sec.dataset.i = idx;
+
+    var ctl = document.createElement('div');
+    ctl.className = 'item-ctl';
+    ctl.innerHTML =
+      '<span class="idx">' + String(idx + 1).padStart(2, '0') + '</span>' +
+      '<button class="ibtn" type="button" data-act="up" aria-label="上移">' + IC.up + '</button>' +
+      '<button class="ibtn" type="button" data-act="down" aria-label="下移">' + IC.down + '</button>' +
+      '<button class="ibtn" type="button" data-act="addimg">' + IC.plus + '<span>图片</span></button>' +
+      '<span class="grow"></span>' +
+      '<button class="ibtn warn" type="button" data-act="delitem">' + IC.trash + '<span>删除此条</span></button>';
+
+    var cap = document.createElement('h2');
+    cap.className = 'cap';
+    cap.dataset.role = 'cap';
+    cap.setAttribute('spellcheck', 'false');
+    cap.textContent = item.loc || '';
+    cap.contentEditable = editing ? 'true' : 'false';
+
+    var shots = document.createElement('div');
+    shots.className = 'shots';
+    item.imgs.forEach(function(src, j){ shots.appendChild(buildShot(src, j)); });
+
+    sec.appendChild(ctl);
+    sec.appendChild(cap);
+    sec.appendChild(shots);
+    return sec;
+  }
+
+  function renderAll(){
+    document.title = DATA.title || '模特册';
+    $('#title').textContent = DATA.title || '';
+    $('#foot').textContent = DATA.footer || '';
+    $('#foot').hidden = !DATA.footer;
+    renderCover();
+
+    bodyEl.innerHTML = '';
+    if(!DATA.items.length){
+      var d = document.createElement('div');
+      d.className = 'empty';
+      d.textContent = editing
+        ? '还没有条目。到「模板设置」里点「新增一位模特」加第一位。'
+        : '这个模特册还没有内容。点右下角「编辑模板」，进设置里添加第一位。';
+      bodyEl.appendChild(d);
+    }else{
+      DATA.items.forEach(function(it, i){ bodyEl.appendChild(buildItem(it, i)); });
+    }
+
+    $('#inTitle').value = DATA.title || '';
+    $('#inFoot').value = DATA.footer || '';
+    var prot = DATA.meta.protect !== false;
+    document.body.classList.toggle('protect', prot);
+    $('#chkProtect').checked = prot;
+
+    updateStats();
+    sync();
+    applyFilter(editing ? $('#inFilter').value : '');
+  }
+
+  function updateStats(){
+    var n = DATA.items.length;
+    var m = DATA.items.reduce(function(a, b){ return a + b.imgs.length; }, 0);
+    $('#dstat').textContent = '共 ' + n + ' 位模特 · ' + m + ' 张图';
+    applyFilter(editing ? $('#inFilter').value : '');
+  }
+
+  function reindex(){
+    $$('.item', bodyEl).forEach(function(sec, k){
+      sec.dataset.i = k;
+      var idx = sec.querySelector('.idx');
+      if(idx) idx.textContent = String(k + 1).padStart(2, '0');
+    });
+    updateStats();
+  }
+
+  function applyFilter(q){
+    filterQ = String(q || '').trim().toLowerCase();
+    var shown = 0;
+    $$('.item', bodyEl).forEach(function(sec){
+      var i = parseInt(sec.dataset.i, 10);
+      var it = DATA.items[i];
+      var hasImg = !!(it && it.imgs.length);
+      var hit = true;
+      if(editing && filterQ){
+        var cap = sec.querySelector('[data-role="cap"]');
+        hit = (cap ? cap.textContent : '').toLowerCase().indexOf(filterQ) >= 0;
+      }
+      var hide = editing ? !hit : !hasImg;
+      sec.hidden = hide;
+      if(!hide) shown++;
+    });
+    var hint = $('#emptyHint');
+    if(!shown && !editing && DATA.items.length){
+      if(!hint){
+        hint = document.createElement('div');
+        hint.id = 'emptyHint';
+        hint.className = 'empty';
+        hint.textContent = '还没有图片。点右下角「编辑模板」，到对应条目下加图。';
+        bodyEl.appendChild(hint);
+      }
+    }else if(hint){ hint.remove(); }
+  }
+
+  /* ================= 编辑操作 ================= */
+
+  function setEditing(on){
+    editing = on;
+    document.body.classList.toggle('editing', on);
+    $('#edbar').hidden = !on;
+    $('#fabTxt').textContent = on ? '完成编辑' : '编辑模板';
+    $$('[data-role="cap"]', bodyEl).forEach(function(c){ c.contentEditable = on ? 'true' : 'false'; });
+    if(!on){ $('#drawer').hidden = true; }
+    applyFilter(on ? $('#inFilter').value : '');
+    if(on) toast('编辑模式：标题、城市名可以直接点着改');
+  }
+
+  function moveItem(i, dir){
+    var j = i + dir;
+    if(j < 0 || j >= DATA.items.length) return;
+    var t = DATA.items[i];
+    DATA.items[i] = DATA.items[j];
+    DATA.items[j] = t;
+
+    var nodes = $$('.item', bodyEl);
+    var a = nodes[i], b = nodes[j];
+    if(!a || !b) return;
+    if(dir < 0){ bodyEl.insertBefore(a, b); } else { bodyEl.insertBefore(b, a); }
+    reindex();
+    saveSoon();
+  }
+
+  function addItem(){
+    DATA.items.push({ loc: '📍新城市', imgs: [] });
+    renderAll();
+    var nodes = $$('.item', bodyEl);
+    var sec = nodes[nodes.length - 1];
+    if(sec){
+      sec.scrollIntoView({ block: 'center', behavior: 'smooth' });
+      var cap = sec.querySelector('[data-role="cap"]');
+      if(cap && editing){
+        cap.focus();
+        var sel = window.getSelection();
+        if(sel && sel.selectAllChildren) sel.selectAllChildren(cap);
+      }
+    }
+    saveSoon();
+    toast('已新增一条，改成城市名后再加图');
+  }
+
+  bodyEl.addEventListener('click', function(e){
+    var btn = e.target.closest ? e.target.closest('[data-act]') : null;
+    if(!btn || !editing) return;
+    var act = btn.dataset.act;
+    var sec = btn.closest('.item');
+    if(!sec) return;
+    var i = parseInt(sec.dataset.i, 10);
+
+    if(act === 'up' || act === 'down'){
+      moveItem(i, act === 'up' ? -1 : 1);
+    }else if(act === 'delitem'){
+      var n = DATA.items[i] ? DATA.items[i].imgs.length : 0;
+      askConfirm('删除这一位模特？', '这位名下的 ' + n + ' 张图片会一起删掉。删完仍可用「恢复初始内容」找回最初版本。', '删除', function(){
+        DATA.items.splice(i, 1);
+        sec.remove();
+        reindex();
+        if(!DATA.items.length) renderAll();
+        saveSoon();
+        toast('已删除');
+      });
+    }else if(act === 'addimg'){
+      openPicker({ mode: 'add', i: i });
+    }else if(act === 'swap'){
+      var fig = btn.closest('.shot');
+      if(fig) openPicker({ mode: 'swap', i: i, j: parseInt(fig.dataset.j, 10) });
+    }else if(act === 'delimg'){
+      var shot = btn.closest('.shot');
+      if(!shot) return;
+      DATA.items[i].imgs.splice(parseInt(shot.dataset.j, 10), 1);
+      shot.remove();
+      $$('.shot', sec).forEach(function(f, k){ f.dataset.j = k; });
+      updateStats();
+      saveSoon();
+      toast('已删除 1 张图');
+    }
+  });
+
+  bodyEl.addEventListener('input', function(e){
+    var cap = e.target.closest && e.target.closest('[data-role="cap"]');
+    if(!cap) return;
+    var sec = cap.closest('.item');
+    DATA.items[parseInt(sec.dataset.i, 10)].loc = cap.textContent;
+    saveSoon();
+  });
+
+  bodyEl.addEventListener('keydown', function(e){
+    var cap = e.target.closest && e.target.closest('[data-role="cap"]');
+    if(cap && e.key === 'Enter'){ e.preventDefault(); cap.blur(); }
+  });
+
+  bodyEl.addEventListener('focusout', function(e){
+    var cap = e.target.closest && e.target.closest('[data-role="cap"]');
+    if(!cap) return;
+    var t = cap.textContent.replace(/\s+/g, ' ').trim();
+    cap.textContent = t;
+    var sec = cap.closest('.item');
+    DATA.items[parseInt(sec.dataset.i, 10)].loc = t;
+    saveSoon();
+  });
+
+  /* ================= 图片选择 ================= */
+
+  function openPicker(opt){
+    picker = opt;
+    var t = $('#mTitle'), d = $('#mDesc');
+    if(opt.mode === 'add'){
+      t.textContent = '加一张图片';
+      d.textContent = '粘贴图片地址，或从电脑里选一张。已经把图放进 assets/ 的话，直接填 assets/文件名.jpg，页面会轻很多；从电脑选的图会自动压到长边 1600px 内嵌进文件。';
+    }else if(opt.mode === 'swap'){
+      t.textContent = '替换这张图';
+      d.textContent = '给一张新图和它同样的位置。本地图片会自动压到长边 1600px。';
+    }else{
+      t.textContent = '更换封面';
+      d.textContent = '封面就是页面最上面那张大图。';
+    }
+    $('#mUrl').value = '';
+    $('#modal').hidden = false;
+    setTimeout(function(){ $('#mUrl').focus(); }, 60);
+  }
+
+  function closePicker(){ $('#modal').hidden = true; picker = null; }
+
+  function validSrc(v){
+    v = String(v || '').trim();
+    if(/^https?:\/\//i.test(v)) return v;
+    if(/^data:image\//i.test(v)) return v;
+    if(/^(\.{0,2}\/)?assets\//i.test(v)) return v;
+    return '';
+  }
+
+  function applySrc(src){
+    if(!picker) return;
+    var msg = '';
+    if(picker.mode === 'cover'){
+      DATA.cover = src;
+      renderCover();
+      msg = '封面已更新';
+    }else if(picker.mode === 'add'){
+      var it = DATA.items[picker.i];
+      if(it){
+        it.imgs.push(src);
+        var sec = $$('.item', bodyEl)[picker.i];
+        if(sec){
+          var shots = sec.querySelector('.shots');
+          if(shots) shots.appendChild(buildShot(src, sec.querySelectorAll('.shot').length));
+        }
+        msg = '已加 1 张图';
+      }
+    }else if(picker.mode === 'swap'){
+      var it2 = DATA.items[picker.i];
+      if(it2){
+        it2.imgs[picker.j] = src;
+        var sec2 = $$('.item', bodyEl)[picker.i];
+        var fig = sec2 ? sec2.querySelectorAll('.shot')[picker.j] : null;
+        if(fig){
+          fig.classList.remove('err');
+          var im = fig.querySelector('img');
+          if(im){ im.dataset.r = '0'; im.src = src; }
+        }
+        msg = '图片已替换';
+      }
+    }
+    if(/^data:/.test(src) && src.length > 260 * 1024){ msg += '（本地图已内嵌，导出的文件会变大）'; }
+    updateStats();
+    saveSoon();
+    toast(msg || '已更新');
+  }
+
+  $('#mOk').addEventListener('click', function(){
+    var v = validSrc($('#mUrl').value);
+    if(!v){ toast('填一个以 http 或 data:image 开头的图片地址'); return; }
+    applySrc(v);
+    closePicker();
+  });
+
+  $('#mUrl').addEventListener('keydown', function(e){
+    if(e.key === 'Enter'){ e.preventDefault(); $('#mOk').click(); }
+  });
+
+  $('#mFileBtn').addEventListener('click', function(){ $('#mFile').click(); });
+  $('#mCancel').addEventListener('click', closePicker);
+
+  $('#mFile').addEventListener('change', function(e){
+    var f = e.target.files && e.target.files[0];
+    e.target.value = '';
+    if(!f) return;
+    var btn = $('#mFileBtn');
+    var old = btn.textContent;
+    btn.textContent = '处理中…';
+    readImage(f, function(src){
+      btn.textContent = old;
+      applySrc(src);
+      closePicker();
+    });
+  });
+
+  function readImage(file, cb){
+    var isRaster = /^image\/(jpeg|png|webp|bmp)$/.test(file.type);
+    var fr = new FileReader();
+    fr.onload = function(){
+      var raw = String(fr.result);
+      if(!isRaster){ cb(raw); return; }
+      var im = new Image();
+      im.onload = function(){
+        var w = im.naturalWidth, h = im.naturalHeight, max = 1600;
+        if(Math.max(w, h) <= max && file.size < 1200 * 1024){ cb(raw); return; }
+        var k = Math.min(1, max / Math.max(w, h));
+        var c = document.createElement('canvas');
+        c.width = Math.max(1, Math.round(w * k));
+        c.height = Math.max(1, Math.round(h * k));
+        var ctx = c.getContext('2d');
+        ctx.fillStyle = '#ffffff';
+        ctx.fillRect(0, 0, c.width, c.height);
+        ctx.drawImage(im, 0, 0, c.width, c.height);
+        cb(c.toDataURL('image/jpeg', 0.86));
+      };
+      im.onerror = function(){ cb(raw); };
+      im.src = raw;
+    };
+    fr.readAsDataURL(file);
+  }
+
+  /* ================= 确认弹窗 ================= */
+
+  function askConfirm(title, desc, okLabel, cb){
+    $('#cTitle').textContent = title;
+    $('#cDesc').textContent = desc || '';
+    $('#cOk').textContent = okLabel || '确定';
+    confirmCb = cb;
+    $('#confirm').hidden = false;
+  }
+  function closeConfirm(){ $('#confirm').hidden = true; confirmCb = null; }
+  $('#cCancel').addEventListener('click', closeConfirm);
+  $('#cOk').addEventListener('click', function(){
+    var cb = confirmCb;
+    closeConfirm();
+    if(cb) cb();
+  });
+
+  /* ================= 设置面板 ================= */
+
+  $('#fab').addEventListener('click', function(){ setEditing(!editing); });
+  $('#btnDone').addEventListener('click', function(){ setEditing(false); });
+
+  $('#btnSet').addEventListener('click', function(){
+    var d = $('#drawer');
+    d.hidden = !d.hidden;
+    if(!d.hidden) $('#inTitle').focus();
+  });
+
+  $('#inTitle').addEventListener('input', function(){
+    DATA.title = this.value;
+    $('#title').textContent = this.value;
+    document.title = this.value || '模特册';
+    saveSoon();
+  });
+  $('#inFoot').addEventListener('input', function(){
+    DATA.footer = this.value;
+    $('#foot').textContent = this.value;
+    $('#foot').hidden = !this.value;
+    saveSoon();
+  });
+  $('#inFilter').addEventListener('input', function(){ applyFilter(this.value); });
+  $('#chkProtect').addEventListener('change', function(){
+    DATA.meta.protect = this.checked;
+    document.body.classList.toggle('protect', this.checked);
+    saveSoon();
+  });
+
+  $('#drawer').addEventListener('click', function(e){
+    var btn = e.target.closest ? e.target.closest('[data-act]') : null;
+    if(!btn) return;
+    var act = btn.dataset.act;
+    if(act === 'addItem'){ addItem(); }
+    else if(act === 'clearItems'){
+      askConfirm('清空所有条目？', '现在这 ' + DATA.items.length + ' 条（含城市名）会一起删掉，变成空白模板。', '清空', function(){
+        DATA.items = [];
+        renderAll();
+        saveSoon();
+        toast('已清空，可以重新添加');
+      });
+    }
+    else if(act === 'cover'){ openPicker({ mode: 'cover' }); }
+    else if(act === 'coverDel'){
+      DATA.cover = '';
+      renderCover();
+      saveSoon();
+      toast('封面已移除');
+    }
+  });
+
+  /* ================= 存储 / 导出 ================= */
+
+  function sanitize(s){
+    return (String(s || '模特册')).replace(/[\\/:*?"<>|\r\n\t]/g, '_').replace(/\s+/g, ' ').trim().slice(0, 40) || '模特册';
+  }
+
+  function download(text, name, mime){
+    try{
+      var blob = new Blob([text], { type: (mime || 'application/octet-stream') + ';charset=utf-8' });
+      var a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = name;
+      document.body.appendChild(a);
+      a.click();
+      setTimeout(function(){ URL.revokeObjectURL(a.href); a.remove(); }, 1500);
+    }catch(err){ toast('导出失败：' + err.message); }
+  }
+
+  $('#btnExport').addEventListener('click', function(){
+    var out = clone(DATA);
+    out.meta = out.meta || {};
+    out.meta.id = 'e' + Date.now().toString(36) + Math.random().toString(36).slice(2, 7);
+    var root = document.documentElement.cloneNode(true);
+    var dEl = root.querySelector('#app-data');
+    if(dEl) dEl.textContent = JSON.stringify(out);
+    var ti = root.querySelector('title');
+    if(ti) ti.textContent = DATA.title || '模特册';
+    var b = root.querySelector('body');
+    if(b) b.classList.remove('editing');
+    ['#edbar', '#drawer', '#modal', '#confirm'].forEach(function(sel){
+      var n = root.querySelector(sel);
+      if(n) n.hidden = true;
+    });
+    var t = root.querySelector('#toast');
+    if(t) t.classList.remove('show');
+    var str = '<!doctype html>\n' + root.outerHTML;
+    download(str, sanitize(DATA.title) + '.html', 'text/html');
+    toast('已导出 HTML，双击就能打开，也能直接发给别人');
+  });
+
+  $('#btnExportJson').addEventListener('click', function(){
+    sync();
+    download(JSON.stringify(DATA, null, 2), sanitize(DATA.title) + '.json', 'application/json');
+    toast('已导出 JSON');
+  });
+
+  $('#btnImport').addEventListener('click', function(){ $('#fileImport').click(); });
+  $('#fileImport').addEventListener('change', function(e){
+    var f = e.target.files && e.target.files[0];
+    e.target.value = '';
+    if(!f) return;
+    var fr = new FileReader();
+    fr.onload = function(){
+      try{
+        var obj = JSON.parse(String(fr.result));
+        if(!obj || !Array.isArray(obj.items)) throw new Error('文件里没有 items 数组');
+        DATA = normalize(obj);
+        DATA.meta.id = SEED_ID;
+        renderAll();
+        persist();
+        toast('已导入 ' + DATA.items.length + ' 条');
+      }catch(err){ toast('导入失败：' + err.message); }
+    };
+    fr.readAsText(f, 'utf-8');
+  });
+
+  $('#btnReset').addEventListener('click', function(){
+    askConfirm('恢复初始内容？', '浏览器里存着的改动会被清掉，回到这个文件最初的内容。导出的 HTML 不受影响。', '恢复', function(){
+      try{ localStorage.removeItem(KEY); }catch(err){}
+      DATA = normalize(clone(SEED));
+      setEditing(false);
+      renderAll();
+      toast('已恢复初始内容');
+    });
+  });
+
+  /* ================= 其他 ================= */
+
+  function toast(msg){
+    var t = $('#toast');
+    t.textContent = msg;
+    t.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ t.classList.remove('show'); }, 2200);
+  }
+
+  document.addEventListener('contextmenu', function(e){
+    if(!editing && document.body.classList.contains('protect')) e.preventDefault();
+  });
+  document.addEventListener('dragstart', function(e){
+    if(!editing && e.target.tagName === 'IMG' && document.body.classList.contains('protect')) e.preventDefault();
+  });
+
+  document.addEventListener('keydown', function(e){
+    if(e.key !== 'Escape') return;
+    if(!$('#modal').hidden){ closePicker(); return; }
+    if(!$('#confirm').hidden){ closeConfirm(); return; }
+    if(!$('#drawer').hidden){ $('#drawer').hidden = true; return; }
+    if(editing) setEditing(false);
+  });
+
+  $('#modal').addEventListener('click', function(e){ if(e.target === this) closePicker(); });
+  $('#confirm').addEventListener('click', function(e){ if(e.target === this) closeConfirm(); });
+
+  renderAll();
+})();
+</script>
+</body>
+</html>
