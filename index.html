@@ -665,6 +665,7 @@
     if(/^https?:\/\//i.test(v)) return v;
     if(/^data:image\//i.test(v)) return v;
     if(/^(\.{0,2}\/)?assets\//i.test(v)) return v;
+    if(/^[^:]*\.(jpg|jpeg|png|webp|gif|avif|svg|bmp)$/i.test(v)) return v;
     return '';
   }
 
